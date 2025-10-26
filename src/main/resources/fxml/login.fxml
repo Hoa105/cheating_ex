@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.project.controller.LoginController"
+      alignment="CENTER"
+      spacing="10"
+      style="-fx-padding: 30;">
+    
+    <Label text="ĐĂNG NHẬP HỆ THỐNG"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+    
+    <TextField fx:id="txtUsername"
+               promptText="Tên đăng nhập"
+               prefWidth="250"/>
+    
+    <PasswordField fx:id="txtPassword"
+                   promptText="Mật khẩu"
+                   prefWidth="250"/>
+    
+    <Button text="Đăng nhập"
+            onAction="#onLogin"
+            prefWidth="200"/>
+    
+    <Label fx:id="lblStatus"
+           textFill="red"/>
+
+    <Hyperlink text="Chưa có tài khoản? Đăng ký"
+               onAction="#onGoRegister"/>
+</VBox>

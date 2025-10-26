@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.project.controller.RegisterController"
+      alignment="CENTER" spacing="10" style="-fx-padding: 30;">
+    
+    <Label text="ĐĂNG KÝ TÀI KHOẢN" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+    
+    <TextField fx:id="txtUsername" promptText="Tên đăng nhập" prefWidth="250"/>
+    <PasswordField fx:id="txtPassword" promptText="Mật khẩu" prefWidth="250"/>
+    <PasswordField fx:id="txtConfirmPassword" promptText="Xác nhận mật khẩu" prefWidth="250"/>
+    
+    <TextField fx:id="txtName" promptText="Họ và tên" prefWidth="250"/>
+    <TextField fx:id="txtEmail" promptText="Email" prefWidth="250"/>
+    <TextField fx:id="txtPhone" promptText="Số điện thoại" prefWidth="250"/>
+    <TextField fx:id="txtAddress" promptText="Địa chỉ" prefWidth="250"/>
+    <DatePicker fx:id="dpBirthday" promptText="Ngày sinh" prefWidth="250"/>
+
+    <Button text="Đăng ký" onAction="#onRegister" prefWidth="200"/>
+
+    <Label fx:id="lblStatus" textFill="red"/>
+
+    <Hyperlink text="Đã có tài khoản? Đăng nhập" onAction="#onGoLogin"/>
+</VBox>

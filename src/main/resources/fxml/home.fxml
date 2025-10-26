@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.project.controller.HomeController"
+      alignment="CENTER" spacing="20"
+      style="-fx-background-color: #f4f4f4; -fx-padding: 40;">
+    
+    <Label text="🎉 Chào mừng bạn đã đăng nhập thành công!"
+           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333;"/>
+    
+    <Button text="📜 Xem lịch sử" onAction="#onViewHistory" prefWidth="150"/>
+
+    
+    <Button text="Đăng xuất"
+            onAction="#onLogout"
+            prefWidth="150"
+            style="-fx-background-color: #d9534f; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 8;"/>
+</VBox>

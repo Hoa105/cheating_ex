@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.project.controller.HistoryController"
+      alignment="TOP_CENTER" spacing="10" style="-fx-padding: 20;">
+    
+    <Label text="📜 Lịch sử kết quả" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Từ ngày:"/>
+        <DatePicker fx:id="fromDatePicker"/>
+        <Label text="Đến ngày:"/>
+        <DatePicker fx:id="toDatePicker"/>
+        <Button text="Lọc lịch sử" onAction="#onFilterHistory"/>
+    </HBox>
+
+    <TableView fx:id="resultTable" prefWidth="700" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="colImage" text="Ảnh"/>
+            <TableColumn fx:id="colDescription" text="Mô tả" prefWidth="250"/>
+            <TableColumn fx:id="colDate" text="Ngày" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+    <Button text="⬅ Trở về Trang chủ" onAction="#onBackHome" style="-fx-font-size: 14px;"/>
+</VBox>
+
